@@ -1,0 +1,28 @@
+﻿<Window x:Class="InstallerWpf.InstallationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InstallerWpf"
+        mc:Ignorable="d"
+        Title="InstallationWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="1" Margin="10">
+            <Label>Chose a directory for installation</Label>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="FilenameTextbox" Width="300" Margin="4" />
+                <Button x:Name="BrowseButton"
+                        Click="BrowseButton_Click"
+                        Margin="4" Padding="5,2"
+                        Content="Browse" />
+            </StackPanel>
+
+            <Button x:Name="InstallButton" Content="Install" Width="200" Margin="10" Click="InstallButton_Click" /> 
+        </StackPanel>
+    </Grid>
+</Window>
